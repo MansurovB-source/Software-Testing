@@ -1,14 +1,11 @@
 import DFS.Graph;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -54,7 +51,7 @@ public class BfsTest {
                     }
                 } else {
                     LinkedList<Integer> elements = new LinkedList<>();
-                    if(!s_elements[0].equals("")) {
+                    if (!s_elements[0].equals("")) {
                         for (String s_e : s_elements) {
                             elements.add(Integer.parseInt(s_e));
                         }
