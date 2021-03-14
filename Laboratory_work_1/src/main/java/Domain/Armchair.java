@@ -12,7 +12,7 @@ public class Armchair {
         this.armchairState = armchairState;
     }
 
-    public void Creak() {
+    public void creak() {
         armchairState = ArmchairState.SQUEAKY;
     }
 

@@ -11,11 +11,16 @@ public class Planet {
 
     public Planet(PlanetState planetState, PlanetPopulation planetPopulation) {
         this.planetState = planetState;
-        this.planetPopulation = planetPopulation;
+        if(this.planetState != PlanetState.DESTROYED) {
+            this.planetPopulation = planetPopulation;
+        } else {
+            this.planetPopulation = PlanetPopulation.UNINHABITED;
+        }
     }
 
     public void destroy() {
         planetState = PlanetState.DESTROYED;
+        planetPopulation = PlanetPopulation.UNINHABITED;
     }
 
     public void populate() {

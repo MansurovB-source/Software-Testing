@@ -65,6 +65,7 @@ public class BfsTest {
         }
     }
 
+//  Testing a regular graph
     @Test
     public void test_1() {
         Graph graph = new Graph(n + 1, data);
@@ -74,6 +75,7 @@ public class BfsTest {
         Assert.assertArrayEquals(visited, graph.getVisited());
     }
 
+//  Testing a graph starting with a vertex that is not connected to the other vertices
     @Test
     public void test_2() {
         Graph graph = new Graph(n + 1, data);
@@ -83,6 +85,7 @@ public class BfsTest {
         Assert.assertArrayEquals(visited, graph.getVisited());
     }
 
+//  Testing a graph that has multiple connectivity components.
     @Test
     public void test_3() {
         Graph graph = new Graph(n + 1, data);

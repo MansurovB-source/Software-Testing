@@ -19,4 +19,8 @@ public class Entity {
     public void makeMistake() {
         entityState = EntityState.MISCONCEPTION;
     }
+
+    public EntityState getEntityState() {
+        return entityState;
+    }
 }
