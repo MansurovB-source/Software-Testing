@@ -18,6 +18,9 @@ public class CoSec implements TrigonometricFunction {
 
     @Override
     public double apply(double value) {
+        if (!TrigonometricFunction.isValid(value)) {
+            return Double.NaN;
+        }
         return 1 / sin.apply(value);
     }
 

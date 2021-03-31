@@ -22,18 +22,20 @@ public class Sin implements TrigonometricFunction {
     }
 
     @Override
-     public double apply(double value) {
+    public double apply(double value) {
         if (!TrigonometricFunction.isValid(value)) {
-            return value;
+            return Double.NaN;
         }
         double current = 0;
         double previous = 0;
         int n = 0;
+        double x;
         do {
             previous = current;
-            current = (pow(-1, n) * pow(value, 2 * n + 1)) / TrigonometricFunction.factorial(2 * n + 1);
+            current += (pow(-1, n) * pow(value, 2 * n + 1)) / TrigonometricFunction.factorial(2 * n + 1);
             n++;
-        } while (abs(current - previous) >= PRECISION || n <= MAX_ITERATION);
+            x = abs(current - previous);
+        } while (Double.compare(abs(current - previous), PRECISION) > 0  && n < MAX_ITERATION);
         return current;
     }
 }

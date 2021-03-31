@@ -19,6 +19,9 @@ public class Tan implements TrigonometricFunction {
 
     @Override
     public double apply(double value) {
+        if (!TrigonometricFunction.isValid(value)) {
+            return Double.NaN;
+        }
         return sin.apply(value) / cos.apply(value);
     }
 

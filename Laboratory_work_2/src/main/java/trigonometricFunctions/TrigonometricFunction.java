@@ -8,8 +8,8 @@ import java.math.BigInteger;
  * @author Behruz Mansurov
  */
 public interface TrigonometricFunction {
-    double PRECISION = 0.000001;
-    double MAX_ITERATION = 1_000_000;
+    double PRECISION = 0.0001;
+    double MAX_ITERATION = 10_000;
 
     static long factorial(int n) {
         long fact = 1;

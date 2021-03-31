@@ -24,6 +24,9 @@ public class Cos implements TrigonometricFunction {
 
     @Override
     public double apply(double value) {
+        if (!TrigonometricFunction.isValid(value)) {
+            return Double.NaN;
+        }
         return sin.apply(value + PI / 2);
     }
 }

@@ -6,8 +6,8 @@ package logarithmicFunction;
  * @author Behruz Mansurov
  */
 public interface LogarithmicFunction {
-    double PRECISION = 0.000001;
-    double MAX_ITERATION = 1_000_000;
+    double PRECISION = 0.0001;
+    double MAX_ITERATION = 10_000;
 
     int BASE_1 = 2;
     int BASE_2 = 3;
