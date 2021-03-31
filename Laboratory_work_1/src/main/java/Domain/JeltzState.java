@@ -11,7 +11,7 @@ public enum JeltzState {
     ANGRY("разозленный"),
     INAGOODMOOD("в хорошем расположении духа");
 
-    String message;
+    private String message;
 
     JeltzState(String message) {
         this.message = message;

@@ -16,14 +16,6 @@ public class Graph {
     private int nodes;
     private ArrayList<LinkedList<Integer>> edges;
 
-    public Graph(int nodes) {
-        this.nodes = nodes;
-        edges = new ArrayList<>();
-        visited = new boolean[nodes];
-        p = new int[nodes];
-        d = new int[nodes];
-    }
-
     public Graph(int nodes, ArrayList<LinkedList<Integer>> edges) {
         this.nodes = nodes;
         this.edges = edges;
@@ -33,10 +25,6 @@ public class Graph {
         Arrays.fill(p, -1);
         Arrays.fill(d, 0);
         Arrays.fill(visited, false);
-    }
-
-    public void addEdge(int v, int e) {
-        edges.get(v).add(e);
     }
 
     public void BFS(int s) {
@@ -66,9 +54,5 @@ public class Graph {
 
     public int[] getP() {
         return p;
-    }
-
-    public int[] getD() {
-        return d;
     }
 }
