@@ -14,8 +14,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  *
  * @author Behruz Mansurov
  */
-public class SecIntegrationTests {
-    double PRECISION = 0.05;
+public class SecIntegrationTests implements Constant {
+
     Sec m_sec = new Sec();
 
     @Test

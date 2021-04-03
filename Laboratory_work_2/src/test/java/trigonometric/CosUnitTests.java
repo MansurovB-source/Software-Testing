@@ -17,8 +17,8 @@ import static java.lang.Math.PI;
  *
  * @author Behruz Mansurov
  */
-public class CosUnitTests {
-    double PRECISION = 0.05;
+public class CosUnitTests implements Constant {
+
     Sin sinMock = Mockito.mock(Sin.class);
     Cos cos = new Cos(sinMock);
 

@@ -9,7 +9,7 @@ import java.math.BigInteger;
  */
 public interface TrigonometricFunction {
     double PRECISION = 0.0001;
-    double MAX_ITERATION = 10_000;
+    double MAX_ITERATION = 100_000;
 
     static long factorial(int n) {
         long fact = 1;

@@ -18,8 +18,7 @@ import trigonometricFunctions.Sin;
  */
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class SinUnitTests {
-    double PRECISION = 0.05;
+public class SinUnitTests implements Constant {
     Sin m_sin = new Sin();
 
     @Test

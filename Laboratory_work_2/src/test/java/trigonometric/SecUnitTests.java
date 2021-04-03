@@ -14,8 +14,7 @@ import trigonometricFunctions.Sec;
  *
  * @author Behruz Mansurov
  */
-public class SecUnitTest {
-    double PRECISION = 0.05;
+public class SecUnitTests implements Constant {
     Cos cos = Mockito.mock(Cos.class);
 
     @ParameterizedTest

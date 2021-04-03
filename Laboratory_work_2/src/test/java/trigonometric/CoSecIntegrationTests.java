@@ -15,8 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  *
  * @author Behruz Mansurov
  */
-public class CoSecIntegrationTests {
-    double PRECISION = 0.05;
+public class CoSecIntegrationTests implements Constant {
     CoSec m_coSec = new CoSec();
 
     @Test
@@ -99,5 +98,12 @@ public class CoSecIntegrationTests {
         assertEquals(1 / sin(PI / 6 + (6 * PI)), m_coSec.apply(PI / 6 + (6 * PI)), PRECISION);
         assertEquals(1 / sin(PI / 6 + (8 * PI)), m_coSec.apply(PI / 6 + (8 * PI)), PRECISION);
         assertEquals(1 / sin(PI / 6 + (10 * PI)), m_coSec.apply(PI / 6 + (10 * PI)), PRECISION);
+    }
+
+    @ParameterizedTest
+    @DisplayName("Unit Test")
+    @CsvFileSource(resources = "/result_coSec.csv")
+    void onRandom(double value, double answer) {
+        assertEquals(answer, m_coSec.apply(value), PRECISION);
     }
 }

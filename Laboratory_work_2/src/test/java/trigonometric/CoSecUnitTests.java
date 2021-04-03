@@ -13,8 +13,8 @@ import trigonometricFunctions.Sin;
  *
  * @author Behruz Mansurov
  */
-public class CoSecUnitTests {
-    double PRECISION = 0.05;
+public class CoSecUnitTests implements Constant {
+
     Sin sin = Mockito.mock(Sin.class);
 
     @ParameterizedTest

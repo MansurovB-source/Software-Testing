@@ -15,8 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  *
  * @author Behruz Mansurov
  */
-public class CosIntegrationTests {
-    double PRECISION = 0.05;
+public class CosIntegrationTests implements Constant {
     Cos m_cos = new Cos();
 
     @Test

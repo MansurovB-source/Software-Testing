@@ -14,8 +14,7 @@ import trigonometricFunctions.Tan;
  *
  * @author Behruz Mansurov
  */
-public class TanUnitTest {
-    double PRECISION = 0.05;
+public class TanUnitTests implements Constant {
     Sin sin = Mockito.mock(Sin.class);
     Cos cos = Mockito.mock(Cos.class);
 

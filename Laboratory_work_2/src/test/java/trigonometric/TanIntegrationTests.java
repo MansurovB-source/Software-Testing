@@ -15,8 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  *
  * @author Behruz Mansurov
  */
-public class TanIntegrationTests {
-    double PRECISION = 0.05;
+public class TanIntegrationTests implements Constant {
     Tan m_tan = new Tan();
 
     @Test
