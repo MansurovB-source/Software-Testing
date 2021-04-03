@@ -6,14 +6,14 @@ package logarithmicFunction;
  * @author Behruz Mansurov
  */
 public class Log implements LogarithmicFunction {
-    private double result;
-    private static final Ln ln = new Ln();
+    private final Ln ln;
 
     public Log() {
+        this.ln = new Ln();
     }
 
-    public Log(double value, double base) {
-
+    public Log(Ln ln) {
+        this.ln = ln;
     }
 
     @Override
@@ -21,6 +21,7 @@ public class Log implements LogarithmicFunction {
         if (!LogarithmicFunction.isValidBase(base)) {
             throw new IllegalArgumentException("Unsupportable base");
         }
+
         return ln.apply(value) / ln.apply(base);
     }
 }

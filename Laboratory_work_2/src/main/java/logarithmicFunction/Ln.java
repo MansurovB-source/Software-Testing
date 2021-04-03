@@ -8,18 +8,6 @@ import static java.lang.Math.*;
  * @author Behruz Mansurov
  */
 public class Ln implements LogarithmicFunction {
-    private double result;
-
-    public Ln() {
-    }
-
-    public Ln(double value) {
-        result = apply(value);
-    }
-
-    public double getResult() {
-        return result;
-    }
 
     @Override
     public double apply(double value) {
@@ -39,7 +27,7 @@ public class Ln implements LogarithmicFunction {
         int n = 1;
         do {
             previous = current;
-            current = pow(z, n) / n;
+            current += pow(z, n) / n;
             n += 2;
         } while (abs(current - previous) > PRECISION || n < MAX_ITERATION);
 
