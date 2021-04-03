@@ -6,14 +6,14 @@ package trigonometricFunctions;
  * @author Behruz Mansurov
  */
 public class CoSec implements TrigonometricFunction {
-    private double result;
-    private static final Sin sin = new Sin();
+    private final Sin sin;
 
     public CoSec() {
+        sin = new Sin();
     }
 
-    public CoSec(double value) {
-        this.result = apply(value);
+    public CoSec(Sin sin) {
+        this.sin = sin;
     }
 
     @Override
@@ -21,10 +21,7 @@ public class CoSec implements TrigonometricFunction {
         if (!TrigonometricFunction.isValid(value)) {
             return Double.NaN;
         }
-        return 1 / sin.apply(value);
-    }
 
-    public double getResult() {
-        return result;
+        return 1 / sin.apply(value);
     }
 }

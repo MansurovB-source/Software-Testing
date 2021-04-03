@@ -6,15 +6,27 @@ package trigonometricFunctions;
  * @author Behruz Mansurov
  */
 public class Tan implements TrigonometricFunction {
-    private double result;
-    private static final Sin sin = new Sin();
-    private static final Cos cos = new Cos();
+    private final Sin sin;
+    private final Cos cos;
 
     public Tan() {
+        this.sin = new Sin();
+        this.cos = new Cos();
     }
 
-    public Tan(double value) {
-        result = apply(value);
+    public Tan(Sin sin, Cos cos) {
+        this.sin = sin;
+        this.cos = cos;
+    }
+
+    public Tan(Sin sin) {
+        this.sin = sin;
+        this.cos = new Cos();
+    }
+
+    public Tan(Cos cos) {
+        this.cos = cos;
+        this.sin = new Sin();
     }
 
     @Override
@@ -22,10 +34,7 @@ public class Tan implements TrigonometricFunction {
         if (!TrigonometricFunction.isValid(value)) {
             return Double.NaN;
         }
-        return sin.apply(value) / cos.apply(value);
-    }
 
-    public double getResult() {
-        return result;
+        return sin.apply(value) / cos.apply(value);
     }
 }

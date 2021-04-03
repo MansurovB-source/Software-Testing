@@ -1,6 +1,6 @@
 package trigonometricFunctions;
 
-import static java.lang.Math.PI;
+import static java.lang.Math.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -8,18 +8,14 @@ import static java.lang.Math.PI;
  * @author Behruz Mansurov
  */
 public class Cos implements TrigonometricFunction {
-    private double result;
-    private static final Sin sin = new Sin();
+    private final Sin sin;
 
     public Cos() {
+        sin = new Sin();
     }
 
-    public Cos(double value) {
-        result = apply(value);
-    }
-
-    public double getResult() {
-        return result;
+    public Cos(Sin sin) {
+        this.sin = sin;
     }
 
     @Override

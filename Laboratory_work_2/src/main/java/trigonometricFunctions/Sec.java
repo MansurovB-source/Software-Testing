@@ -6,14 +6,14 @@ package trigonometricFunctions;
  * @author Behruz Mansurov
  */
 public class Sec implements TrigonometricFunction {
-    private double result;
-    private static final Cos cos = new Cos();
+    private final Cos cos;
 
     public Sec() {
+        this.cos = new Cos();
     }
 
-    public Sec(double value) {
-        this.result = apply(value);
+    public Sec(Cos cos) {
+        this.cos = cos;
     }
 
     @Override
@@ -22,9 +22,5 @@ public class Sec implements TrigonometricFunction {
             return Double.NaN;
         }
         return 1 / cos.apply(value);
-    }
-
-    public double getResult() {
-        return result;
     }
 }
