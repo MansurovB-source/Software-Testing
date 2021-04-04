@@ -27,6 +27,7 @@ public class CsvGenerator {
         this.mainFunction = mainFunction;
     }
 
+
     public void generate(double from, double to, double step) {
         try (PrintWriter printWriter = new PrintWriter(fileName)) {
             StringBuilder sb = new StringBuilder();
@@ -65,11 +66,5 @@ public class CsvGenerator {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-    }
-
-    public static void main(String[] args) {
-        CsvGenerator csvGenerator = new CsvGenerator("result.csv");
-        csvGenerator.setMainFunction(new MainFunction());
-        csvGenerator.generate(-10, 10, 0.5);
     }
 }
